@@ -1,0 +1,31 @@
+<h1>MY POSTS</h1>
+
+<table class="table table-responsive table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>File</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Created At</th>
+            <th>Allow Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each posts}}
+        <tr>
+            <td>{{id}}</td>
+            <td><img height="50px" class="img-responsive" src="/uploads/{{file}}"></td>
+            <td>{{title}}</td>
+            <td>{{category.name}}</td>
+            <td>{{status}}</td>
+            <td>{{ generateTime createdAt 'MMMM Do YYYY'}}</td>
+            <td>{{allowComments}}</td>
+            <td><a href="/posts/{{id}}">View</a></td>
+            <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">Edit</a></td>
+            <td><a href="/admin/posts/delete/{{id}}?_method=DELETE" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

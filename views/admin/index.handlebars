@@ -1,0 +1,24 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="index.html">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">Create Posts</li>
+</ol>
+
+<!-- Page Content -->
+<h1>Generate Posts</h1>
+<hr>
+<p>This is a great starting point for new custom pages.</p>
+
+<div class="row" style="margin:5px;">
+  <form action="/admin/generate-fake-posts" method="POST">
+    <div class="form-group">
+        <input name="amount" type="number" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-dark">Generate</button>
+  </form>
+</div>
+<div class="row">
+  <canvas id="myChart" width="400" height="400"></canvas>
+</div>
